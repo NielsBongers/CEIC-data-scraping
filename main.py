@@ -34,7 +34,7 @@ for svg_path in path_list:
     with open(svg_path) as f: 
         for line in f: 
             regex_results = re.findall('<tspan x="5" y="22">([0-9. ]+)', line) 
-            country_data_dict[country_name] = regex_results 
+            country_data_dict[country_name] = [year_data.replace(" ", "") for year_data in regex_results] 
       
 try: 
     with open("data/output_file.csv", "w") as f: 
