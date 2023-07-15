@@ -50,3 +50,5 @@ try:
             f.write("\n")
 except Exception as e: 
     print(f"Can't open file, is it already opened? Exception: {e}")
+
+print("Completed data extraction!") 
